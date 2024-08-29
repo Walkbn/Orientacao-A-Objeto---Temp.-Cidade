@@ -7,10 +7,12 @@ public class City {
             Utilitario.pausar(4);
             menu();
             selecMenu = scan.nextInt();
+            switch (selecMenu) {
+                case 0: option = 1; break;
+            } 
             cityName = nameCity(selecMenu);
             temperature = TemperatureCity.generalTemperature(selecMenu);
             System.out.println("A temperatura de " + cityName + " é de " + temperature + "° Graus Celsius");
-            
         }
         scan.close();
     }
